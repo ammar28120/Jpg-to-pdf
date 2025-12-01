@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to JPG Multi Tools</title>
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1E1E2F;
+            color: #EAEAEA;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #2B2D42;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #FFD700;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Main Content Styles */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Tools Grid Styles */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Tool Card Styles */
+        .tool-card {
+            background-color: #3A3D5B;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(255, 215, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .tool-card:hover {
+            background-color: #FFD700;
+            color: #1E1E2F;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(255, 215, 0, 0.3);
+        }
+
+        .tool-card h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .tool-card p {
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        /* Button Styles */
+        .btn {
+            background-color: #FFD700;
+            color: #1E1E2F;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1rem;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #E6C200;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2B2D42;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: #EAEAEA;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #FFD700;
+        }
+
+        .copyright {
+            color: #AAAAAA;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .tool-card {
+                padding: 1.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.75rem;
+            }
+            
+            .tool-card h2 {
+                font-size: 1.25rem;
+            }
+            
+            .btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PDF to JPG Multi Tools</h1>
+        <p>Your all-in-one solution for document and media conversion needs</p>
+    </header>
+
+    <main>
+        <section class="tools-grid">
+            <!-- Tool Card 1: PDF to JPG -->
+            <div class="tool-card">
+                <h2>PDF to JPG</h2>
+                <p>Convert your PDF documents to high-quality JPG images with just a few clicks.</p>
+                <button class="btn" data-tool="PDF to JPG">Use Tool</button>
+            </div>
+
+            <!-- Tool Card 2: Image Converter -->
+            <div class="tool-card">
+                <h2>Image Converter</h2>
+                <p>Convert images between various formats like PNG, JPG, GIF, and more.</p>
+                <button class="btn" data-tool="Image Converter">Use Tool</button>
+            </div>
+
+            <!-- Tool Card 3: Image Compressor -->
+            <div class="tool-card">
+                <h2>Image Compressor</h2>
+                <p>Reduce image file sizes without compromising quality for faster loading.</p>
+                <button class="btn" data-tool="Image Compressor">Use Tool</button>
+            </div>
+
+            <!-- Tool Card 4: Image Crop -->
+            <div class="tool-card">
+                <h2>Image Crop</h2>
+                <p>Crop and resize your images to the perfect dimensions for any purpose.</p>
+                <button class="btn" data-tool="Image Crop">Use Tool</button>
+            </div>
+
+            <!-- Tool Card 5: Video Converter -->
+            <div class="tool-card">
+                <h2>Video Converter</h2>
+                <p>Convert videos between different formats like MP4, AVI, MOV, and more.</p>
+                <button class="btn" data-tool="Video Converter">Use Tool</button>
+            </div>
+
+            <!-- Tool Card 6: PDF to Word -->
+            <div class="tool-card">
+                <h2>PDF to Word</h2>
+                <p>Convert PDF files to editable Word documents while preserving formatting.</p>
+                <button class="btn" data-tool="PDF to Word">Use Tool</button>
+            </div>
+
+            <!-- Tool Card 7: EMI Calculator -->
+            <div class="tool-card">
+                <h2>EMI Calculator</h2>
+                <p>Calculate your Equated Monthly Installments for loans with detailed breakdowns.</p>
+                <button class="btn" data-tool="EMI Calculator">Use Tool</button>
+            </div>
+
+            <!-- Tool Card 8: SIP Calculator -->
+            <div class="tool-card">
+                <h2>SIP Calculator</h2>
+                <p>Plan your investments with our Systematic Investment Plan calculator.</p>
+                <button class="btn" data-tool="SIP Calculator">Use Tool</button>
+            </div>
+
+            <!-- Tool Card 9: Audio Trim -->
+            <div class="tool-card">
+                <h2>Audio Trim</h2>
+                <p>Trim and edit your audio files to create perfect sound clips.</p>
+                <button class="btn" data-tool="Audio Trim">Use Tool</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <p class="copyright">&copy; 2023 PDF to JPG Multi Tools. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for button click interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.btn');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const toolName = this.getAttribute('data-tool');
+                    alert(`Redirecting to ${toolName}`);
+                    // In a real implementation, you would redirect to the actual tool page
+                    // window.location.href = `/tools/${toolName.toLowerCase().replace(/\s+/g, '-')}`;
+                });
+            });
+        });
+    </script>
+</body>
+                                    </html>

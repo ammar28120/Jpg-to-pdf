@@ -1,0 +1,8 @@
+magick -density 1200 input.pdf \
+       -filter Lanczos \
+       -define filter:blur=0.8 \
+       -define jpeg:subsampling-factor=1x1 \
+       -quality 95 \
+       -colorspace sRGB \
+       -interlace none \
+       output-%03d.jpg
